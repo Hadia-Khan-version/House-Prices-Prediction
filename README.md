@@ -51,7 +51,13 @@ The gap between CV RMSE (0.1102) and public leaderboard RMSE (0.12803) is discus
 pip install -r requirements.txt
 ```
 
-Download `train.csv` and `test.csv` from the [competition data page](https://www.kaggle.com/competitions/house-prices-advanced-regression-techniques/data) and place them in the same directory, or run the notebook directly on Kaggle where the data is mounted automatically.
+The notebook was written and run on Kaggle, where the competition data is mounted automatically at `/kaggle/input/house-prices-advanced-regression-techniques/`. To run it outside Kaggle:
+
+1. Download `train.csv`, `test.csv`, and `data_description.txt` from the [competition data page](https://www.kaggle.com/competitions/house-prices-advanced-regression-techniques/data) (requires a free Kaggle account and accepting the competition rules)
+2. Place them in the same directory as the notebook
+3. Update the two `pd.read_csv(...)` paths at the top of the notebook from `/kaggle/input/house-prices-advanced-regression-techniques/train.csv` to `train.csv` (and same for `test.csv`)
+
+Easiest path overall: open the notebook directly on Kaggle (via the competition's **Code** tab → **New Notebook**), where the data is already attached and no path changes are needed.
 
 ## Possible next steps
 
@@ -60,6 +66,9 @@ Download `train.csv` and `test.csv` from the [competition data page](https://www
 - LightGBM/CatBoost as additional blend members
 - A stacked meta-model instead of a fixed-weight blend
 - Error analysis by price bucket and feature importance inspection
+
+**Find the Notebook here:** [Kaggle Notebook](https://www.kaggle.com/code/hadiaaakhaaan/house-prices-prediction-competition-notebook)
+
 
 ## Author
 
